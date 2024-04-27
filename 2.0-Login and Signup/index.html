@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo/browser.png" type="image/x-icon">
+    <title>Login |Innosync.com</title>
+     <style>
+        :root{
+    --light-pink:#E0BFCE;
+    --light-pink-shade1:#E4E3EA;
+    --light-pink-shade2:#F7F1F5;
+    --blue:#2D719F;
+    --blue-shade:#4B85AC;
+    --white:#ffff;
+    --black:#000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-pink-shade2);
+
+}
+.login-main-nav{
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 400px;
+    flex-wrap: nowrap;
+   
+}
+.login-main-img>img{
+    width: 200px;
+    height: 100px;
+    margin-left: 30px;
+}
+.login-work-with-us{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-end;
+
+}
+#login-work-with-us{
+        background-color: var(--light-pink);
+        border: 0;
+        height: 100px;
+        width: 160px;
+        border-radius: 12px;
+    }
+#login-work-with-us:hover{
+        cursor: pointer;
+        background-color: var(--blue);
+        color: var(--white);
+        transition: .5s ease all;
+    }
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--blue-shade);
+}
+ form{
+    width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+} 
+.form-grouplogin {
+    width: 100%;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-lable{
+align-items: start;
+}
+.label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--light-pink);
+    border-radius: 6px;
+    height: 50px;
+    outline: none;
+    caret-color: var(--light-pink);
+}
+input:focus {
+    
+    border-color: var(--blue); 
+    box-shadow: 0 0 5px var(--light-pink); 
+  }
+.buttonlogin[type="submit"] {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--blue);
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.buttonlogin[type="submit"]:hover {
+    background-color: var(--light-pink);
+    color: var(--blue);
+}
+.p {
+    margin-top: 10px;
+}
+
+.a{
+    color:var(--blue);
+    text-decoration: none;
+}
+
+     </style>
+</head>
+<body class="main-body">
+    <header class="login-main-nav">
+        <div class="login-main-img">
+            <img src="/assets/logo/Innosync (1).png" alt="Logo">
+        </div>
+        <div class="login-work-with-us"><a href="work-with-us.html"><button id="login-work-with-us">Work With Us</button></a></div>
+    </div>
+    </header>
+    <div class="login-container">
+        <h2 class="form-grouplogin">Login</h2>
+        <form action="login.php" method="POST">
+            <label for="email" class="input-label">Email:</label>
+            <div class="form-grouplogin">
+                
+                <input  type="email" id="email" name="email" required>
+            </div>
+            <label for="password" class="input-label">Password:</label>
+            <div class="form-grouplogin">
+                
+                <input  type="password" id="password" name="password" required>
+            </div>
+            <div class="form-grouplogin">
+                <button class="buttonlogin" type="submit">Login</button>
+            </div>
+           <div class="form-grouplogin">
+            <p>Don't have an account? <a href="./src/create_account.html"> <span>Create an account</span> </a></p>
+           </div> 
+        </form>
+    </div>
+</body>
+</html>

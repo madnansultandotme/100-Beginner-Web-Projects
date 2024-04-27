@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/logo/browser.png" type="image/x-icon">
+    <title>Registration |Innosync.com</title>
+    <style>
+        :root{
+    --light-pink:#E0BFCE;
+    --light-pink-shade1:#E4E3EA;
+    --light-pink-shade2:#F7F1F5;
+    --blue:#2D719F;
+    --blue-shade:#4B85AC;
+    --white:#ffff;
+    --black:#000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+        body {
+            background-color: #f4f4f4;
+        }
+        h2{
+    text-align: center;
+    color: var(--blue);
+}
+        .newuser-container {
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            margin: 0 auto;
+           padding: 20px;
+           height: 100vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form{
+            width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        }
+
+    .newuserform-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+    /* border: 2px solid orchid; */
+
+        }
+
+        .label {
+            margin-bottom: 5px;
+        }
+
+        .input {
+     width: 100%;
+     height: 50px;
+    padding: 10px;
+    border: 2px solid var(--light-pink);
+    border-radius: 6px;
+    outline: none;
+    caret-color: var(--light-pink);
+            /* border: 2px solid yellow; */
+        }
+
+        .newuser-button {
+            width: 50%;
+            height: 50px;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: var(--blue);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+        }
+
+        .newuser-button:hover {
+            background-color: var(--light-pink);
+            color: var(--blue);
+        }
+        input:focus {
+    
+    border-color: var(--blue); 
+    box-shadow: 0 0 5px var(--light-pink); 
+  }
+    </style>
+</head>
+<body>
+    <div class="newuser-container">
+            <h2>Registration</h2>
+            <form action="register.php" method="post">
+                <label class="label" for="firstName">First Name:</label>
+                <div class="newuserform-group">
+                    
+                    <input class="input" type="text" id="firstName" name="firstName" required>
+                </div>
+                <label class="label" for="lastName">Last Name:</label>
+                <div class="newuserform-group">
+                    
+                    <input class="input" type="text" id="lastName" name="lastName" required>
+                </div>
+                <label class="label" for="email">Email:</label>
+                <div class="newuserform-group">
+                    
+                    <input class="input" type="email" id="email" name="email" required>
+                </div>
+                <label class="label" for="password">Password:</label>
+                <div class="newuserform-group">
+                    
+                    <input class="input" type="password" id="password" name="password" required>
+                </div>
+                <label class="label" for="confirmPassword">Confirm Password:</label>
+                <div class="newuserform-group">
+                    
+                    <input class="input" type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="newuserform-group">
+                    <button class="newuser-button" type="submit">Register</button>
+                </div>
+                <div class="newuserform-group">
+                    <p>Already have an account? <a href="/index.html"> <span>Login</span> </a></p>
+                </div>
+            </form>
+        
+    </div>
+</body>
+</html>
